@@ -1,73 +1,74 @@
-# Pressure Cooker Whistle Counter Web App
+# Pressure Cooker Whistle Counter
 
-This is a Vite + React + TypeScript web application that counts Indian pressure cooker whistles using your device's microphone and gives an alarm after a set number of whistles.
+A Vite + React + TypeScript web app that counts Indian pressure cooker whistles using the microphone and gives an alarm after a set number of whistles. The app features:
 
-## Features
-- Start/stop listening for whistles
-- Real-time whistle count display
-- Set a custom alarm threshold
-- Alarm sound/notification when the threshold is reached
+- **Audio processing and whistle detection** using a robust multi-algorithm system
+- **Microphone access** for real-time whistle counting
+- **Sample whistle recording** and template-based detection
+- **Live frequency spectrum visualization**
+- **Speech recognition assist** (optional)
+- **User-friendly UI**
+- **Automated tests** with Jest and Testing Library
+- **One-click deploy to GitHub Pages**
 
-## How to Run
-1. Install dependencies:
-   ```powershell
-   npm install
+## 🚀 Live Demo
+[https://mkgmadhan.github.io/whistleCounter](https://mkgmadhan.github.io/whistleCounter)
+
+## 🛠️ Getting Started
+
+### Prerequisites
+- Node.js (v18+ recommended)
+- npm
+
+### Installation
+```sh
+npm install
+```
+
+### Development
+```sh
+npm run dev
+```
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Testing
+```sh
+npm test
+```
+
+### Build
+```sh
+npm run build
+```
+
+## 🧪 Whistle Detection Algorithm
+- Multi-algorithm scoring (peak prominence, sharpness, focus, distribution, temporal consistency, template matching)
+- Real-time frequency analysis (FFT)
+- Adaptive noise filtering and anti-false-positive logic
+- Optional speech recognition for whistle-like sounds
+
+## 🎤 How to Use
+1. **Record a sample whistle** (optional, improves accuracy)
+2. **Set the alarm threshold** (number of whistles)
+3. **Click Start** to begin listening
+4. The app will count whistles and alert you when the threshold is reached
+
+## 🌐 Deployment (GitHub Pages)
+1. Set the `homepage` field in `package.json` to your repo URL
+2. Deploy with:
+   ```sh
+   npm run deploy
    ```
-2. Start the development server:
-   ```powershell
-   npm run dev
-   ```
-3. Open the app in your browser (usually at http://localhost:5173)
+3. Your app will be live at `https://<your-username>.github.io/<repo-name>`
 
-## Notes
-- The app requires microphone access.
-- Whistle detection uses basic audio analysis; accuracy may vary depending on environment.
+## 📁 Project Structure
+- `src/WhistleCounter.tsx` — Main app logic and UI
+- `src/WhistleCounter.test.tsx` — Automated tests
+- `public/` — Static assets
 
-## License
-MIT
+## 🙏 Credits
+- Built with [Vite](https://vitejs.dev/), [React](https://react.dev/), and [TypeScript](https://www.typescriptlang.org/)
 
 ---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+MIT License
