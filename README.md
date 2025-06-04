@@ -1,5 +1,7 @@
 # Pressure Cooker Whistle Counter
 
+> **Note:** This application is end-to-end written by GitHub Copilot (GHCP Copilot).
+
 A Vite + React + TypeScript web app that counts Indian pressure cooker whistles using the microphone and gives an alarm after a set number of whistles. The app features:
 
 - **Audio processing and whistle detection** using a robust multi-algorithm system
